@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "spiderversify",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jager-yoo/Spiderversify.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "65b5933b5b477a1bf6b2980cb174a7eaae840ecb"
+      }
+    }
+  ],
+  "version" : 2
+}
