@@ -55,7 +55,18 @@ class ViewController: UIViewController {
         guard let textFieldText = sender.text else { return }
         
         if textFieldText.count == 5 {
-            mainLabel.text = sender.text
+            let alert = UIAlertController(title: "힝 속았지?", message: "1초 뒤 앱이 꺼집니다.", preferredStyle: .alert)
+
+            
+            let ok = UIAlertAction(title: "확인", style: .default) { action in
+                DispatchQueue.main.async {
+                    // spiderversify 적용하기
+                    // https://github.com/Jager-yoo/Spiderversify
+                    self.openSwiftUIView()
+                }
+            }
+            alert.addAction(ok)
+            present(alert, animated: true)
             
         } else {
             let alert = UIAlertController(title: "경고!", message: "1초 뒤 앱이 꺼집니다.", preferredStyle: .alert)
@@ -68,12 +79,8 @@ class ViewController: UIViewController {
                     self.openSwiftUIView()
                 }
             }
-            
             alert.addAction(ok)
             present(alert, animated: true)
-            
-            
-            
         }
         inputTextField.text = ""
         
@@ -95,7 +102,18 @@ class ViewController: UIViewController {
         guard let textFieldText = inputTextField.text else { return }
         
         if textFieldText.count == 5 {
-            mainLabel.text = inputTextField.text
+            let alert = UIAlertController(title: "경고!", message: "1초 뒤 앱이 꺼집니다.", preferredStyle: .alert)
+
+            
+            let ok = UIAlertAction(title: "확인", style: .default) { action in
+                DispatchQueue.main.async {
+                    // spiderversify 적용하기
+                    // https://github.com/Jager-yoo/Spiderversify
+                    self.openSwiftUIView()
+                }
+            }
+            alert.addAction(ok)
+            present(alert, animated: true)
             
         } else {
             let alert = UIAlertController(title: "경고!", message: "1초 뒤 앱이 꺼집니다.", preferredStyle: .alert)
@@ -111,9 +129,6 @@ class ViewController: UIViewController {
             
             alert.addAction(ok)
             present(alert, animated: true)
-            
-            
-            
         }
         inputTextField.text = ""
     }
